@@ -1,0 +1,12 @@
+Rome
+2000000
+Milan
+1500000
+Naples
+1000000
+Palermo
+1000000
+Florence
+1500000
+Turin
+1500000

@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9B419E3E-4A65-419A-81B6-D26A5D6F7B1E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ConsoleDesignPatternsSampleCode</RootNamespace>
+    <AssemblyName>ConsoleDesignPatternsSampleCode</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=4.8.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.8.1\lib\net45\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Dynamitey, Version=2.0.9.136, Culture=neutral, PublicKeyToken=cbf53ea3aeb972c6, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dynamitey.2.0.9.136\lib\net40\Dynamitey.dll</HintPath>
+    </Reference>
+    <Reference Include="ImpromptuInterface, Version=7.0.1.0, Culture=neutral, PublicKeyToken=0b1781c923b2975b, processorArchitecture=MSIL">
+      <HintPath>..\packages\ImpromptuInterface.7.0.1\lib\net40\ImpromptuInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.XmlTransform, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Xdt.2.1.2\lib\net40\Microsoft.Web.XmlTransform.dll</HintPath>
+    </Reference>
+    <Reference Include="MoreLinq, Version=3.0.0.0, Culture=neutral, PublicKeyToken=384d532d7e88985d, processorArchitecture=MSIL">
+      <HintPath>..\packages\morelinq.3.0.0\lib\net451\MoreLinq.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Core, Version=2.14.0.832, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\NuGet.Core.2.14.0\lib\net40-Client\NuGet.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Reactive, Version=4.1.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.4.1.2\lib\net46\System.Reactive.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.1\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DesignPatterns\Behavioral\ChainOfResposibility.cs" />
+    <Compile Include="DesignPatterns\Behavioral\Command.cs" />
+    <Compile Include="DesignPatterns\Behavioral\Interpreter.cs" />
+    <Compile Include="DesignPatterns\Behavioral\Iterator.cs" />
+    <Compile Include="DesignPatterns\Behavioral\Mediator.cs" />
+    <Compile Include="DesignPatterns\Behavioral\MediatorEventBroker.cs" />
+    <Compile Include="DesignPatterns\Behavioral\Memento.cs" />
+    <Compile Include="DesignPatterns\Behavioral\NullObject.cs" />
+    <Compile Include="DesignPatterns\Behavioral\ObserverBindingList.cs" />
+    <Compile Include="DesignPatterns\Behavioral\ObserverWeakEvent.cs" />
+    <Compile Include="DesignPatterns\Behavioral\StateHandMade.cs" />
+    <Compile Include="DesignPatterns\Behavioral\StateWithSwitch.cs" />
+    <Compile Include="DesignPatterns\Behavioral\Strategy.cs" />
+    <Compile Include="DesignPatterns\Behavioral\TemplateMethod.cs" />
+    <Compile Include="DesignPatterns\Behavioral\Visitor.cs" />
+    <Compile Include="DesignPatterns\Creational\AbstractFactory.cs" />
+    <Compile Include="DesignPatterns\Creational\Builder.cs" />
+    <Compile Include="DesignPatterns\Creational\BuilderFacet.cs" />
+    <Compile Include="DesignPatterns\Creational\BuilderRecursiveWithGenerics.cs" />
+    <Compile Include="DesignPatterns\Creational\FactoryMethod.cs" />
+    <Compile Include="DesignPatterns\Creational\PrototypeIConableNotRecommended.cs" />
+    <Compile Include="DesignPatterns\Creational\PrototypeViaSerialization.cs" />
+    <Compile Include="DesignPatterns\Creational\Singleton.cs" />
+    <Compile Include="DesignPatterns\Creational\SingletonViaDependencyInjection.cs" />
+    <Compile Include="DesignPatterns\Creational\SingletonViaMonostatePattern.cs" />
+    <Compile Include="DesignPatterns\Structural\Adapter.cs" />
+    <Compile Include="DesignPatterns\Structural\AdapterWithCaching.cs" />
+    <Compile Include="DesignPatterns\Structural\Bridge.cs" />
+    <Compile Include="DesignPatterns\Structural\Composite.cs" />
+    <Compile Include="DesignPatterns\Structural\CompositeNeuralNetwork.cs" />
+    <Compile Include="DesignPatterns\Structural\Decorator.cs" />
+    <Compile Include="DesignPatterns\Structural\DecoratorMultipleInheritance.cs" />
+    <Compile Include="DesignPatterns\Structural\DecoratorWithAdapter.cs" />
+    <Compile Include="DesignPatterns\Structural\Facade.cs" />
+    <Compile Include="DesignPatterns\Structural\Flyweight.cs" />
+    <Compile Include="DesignPatterns\Structural\Proxy.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="zCities.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
